@@ -74,9 +74,14 @@ public class ReadQuery {
                 table += "<td>";
                     table +=player.getPlayerPosition();
                 table += "</td>";
-            table += "</tr>";
-        }
-        table += "</table>";
+                    
+                table += "<td>";
+                table += "<a href=delete?playerID=" + player.getPlayerID()+ "> delete </a>";
+                table += "</td>";
+                        
+                 table += "</tr>";       
+                        }
+                 table += "</table>";
                 return table;
     }
 
