@@ -9,12 +9,12 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Add a New Friend</title>
+        <title>Add a New Player</title>
     </head>
     <body>
-        <h1>Add a New Friend</h1>
+        <h1>Add a New Player</h1>
         
-        <form name="addForm" action="addFriend" method="get">
+        <form name="addForm" action="addPlayer" method="get">
             <label>First Name:</label>
             <input type="text" name="first name" value=""/>
             <br>
@@ -22,13 +22,13 @@
             <input type="text" name="last name" value=""/>
             <br>
             <label>Number:</label>
-            <input type="text" name="number" value=""/>
+            <input type="int" name="number" value=""/>
             <br>
             <label>Position:</label>
             <input type="text" name="position" value=""/>
+            <br>
             <input type="submit" name="submit" value="Submit"/>
-      
-        
+   
         </form>
     </body>
 </html>
