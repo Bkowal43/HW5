@@ -4,11 +4,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="mystyle.css">
         <title>Blackhawks Players</title>
     </head>
     <body>
+        <div class="middle">
         <h1>Chicago Blackhawks Player Database</h1>
-        <div id ="pics">
+        
         <a href="read">View All Players</a>
+        </div>
     </body>
 </html>

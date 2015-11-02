@@ -53,7 +53,7 @@ public class DeleteQuery {
     public void doDelete(int playerID) throws SQLException{
         
       //set up a string to hold our query
-        String query= "DELETE FROM players WHERE playerID=?";
+        String query= "DELETE FROM BLACKHAWKS_PLAYERS WHERE playerID=?";
         
         PreparedStatement ps = conn.prepareStatement(query);
         

@@ -24,7 +24,7 @@ public class ReadQuery {
     InputStream instr = getClass().getResourceAsStream("dbConn.properties");
     props.load(instr);
     instr.close();
-    
+   
     String driver= props.getProperty("driver.name");
     String url = props.getProperty("server.name");
     String username= props.getProperty("user.name");
@@ -45,7 +45,15 @@ public class ReadQuery {
     public String getHTMLtable() throws SQLException{
         String table ="";
         table += "<table border=1>";
-        
+        table+="<tr>";
+        table+="<th>ID</th>";
+        table+="<th>First Name</th>";
+        table+="<th>Last Name</th>";
+        table+="<th>Number</th>";
+        table+="<th>Position</th>";
+        table+="<th></th>";
+        table+="</tr>";
+                
         while(this.results.next()){
             Players player = new Players();
             player.setPlayerID(this.results.getInt("playerID"));
@@ -53,7 +61,7 @@ public class ReadQuery {
             player.setLastName(this.results.getString("lastName"));
             player.setPlayerNumber(this.results.getInt("playerNumber"));
             player.setPlayerPosition(this.results.getString("playerPosition"));
-            
+           
             table += "<tr>";
                 table += "<td>";
                     table +=player.getPlayerID();
