@@ -44,15 +44,15 @@ public class ReadQuery {
     }
     public String getHTMLtable() throws SQLException{
         String table ="";
-        table += "<table border=1>";
+        table +="<table>";
         table+="<tr>";
-        table+="<th>ID</th>";
-        table+="<th>First Name</th>";
-        table+="<th>Last Name</th>";
-        table+="<th>Number</th>";
-        table+="<th>Position</th>";
-        table+="<th></th>";
-        table+="</tr>";
+        table +="<th>ID</th>";
+        table +="<th>First Name</th>";
+        table +="<th>Last Name</th>";
+        table +="<th>Number</th>";
+        table +="<th>Position</th>";
+        table +="<th></th>";
+        table +="</tr>";
                 
         while(this.results.next()){
             Players player = new Players();

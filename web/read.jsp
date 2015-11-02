@@ -13,9 +13,10 @@
     
     
         <h1>Blackhawks Players</h1>
-        <table> 
+        
+            
        <%= table %>
-        </table>
+        
         
         <br><br>
         <a href ="add"> Add A New Player </a>
