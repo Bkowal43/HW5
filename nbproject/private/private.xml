@@ -3,8 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Bryan/Documents/NetBeansProjects/DatabaseSDDv2_1/web/read.jsp</file>
+            <file>file:/C:/Users/Bryan/Documents/NetBeansProjects/DatabaseSDDv2_1/src/java/controller/UpdateServlet.java</file>
+            <file>file:/C:/Users/Bryan/Documents/NetBeansProjects/DatabaseSDDv2_1/src/java/controller/UpdateFormServlet.java</file>
+            <file>file:/C:/Users/Bryan/Documents/NetBeansProjects/DatabaseSDDv2_1/src/java/model/Players.java</file>
+            <file>file:/C:/Users/Bryan/Documents/NetBeansProjects/DatabaseSDDv2_1/src/java/dbHelpers/UpdateQuery.java</file>
             <file>file:/C:/Users/Bryan/Documents/NetBeansProjects/DatabaseSDDv2_1/src/java/dbHelpers/ReadQuery.java</file>
+            <file>file:/C:/Users/Bryan/Documents/NetBeansProjects/DatabaseSDDv2_1/web/updateForm.jsp</file>
             <file>file:/C:/Users/Bryan/Documents/NetBeansProjects/DatabaseSDDv2_1/web/index.jsp</file>
         </group>
     </open-files>
