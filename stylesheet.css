@@ -1,57 +1,7 @@
-
-
-body{
-    background-color: #D2B48C;
-    font-size: 1em;
-    font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
-    letter-spacing: -0.07em;
-
-
-}
-
-th{
-    background-color: #FFFF99;
-    color: #696969;
-    padding: 7px;
-}
-
-
-
-
-table{
-    
-    border: solid white;
-    background-color: white
-}
-
-
-
-td{
-    background-color: #F08080;
-    color: white;
-    padding: 7px;
-}
-
-
-
-fieldset{
-    width: 350px;
-    border: solid white;
-    background-color: #F08080;
-}
-
-
-.middle{
-    text-align: center;
-    font-size: 2.5em;
-}
-
-input [readonly] {background-color:gray;}
-
 body {background-color: red; }
 
 /* wrapper div that holds all of the content divs fo the page */
-.wrap {text-align:center; width:90%; margin: 0 auto; border: 1px solid black; margin-top: 10px;}
+.wrap {text-align:center; width:90%; margin: 0 auto; border: 1px solid black; margin-top:25px;}
 
 /*formats the page header */
 .header{text-align:left; padding:25px;}
@@ -71,13 +21,15 @@ body {background-color: red; }
 
 /*Fat Erik's Pipelist*/
 /*http://css.maxdesign.com.au/listamatic/horizontal32.htm */
-.navlist{
+.navlist
+{
 list-style: none;
 padding: 0;
 margin: 0;
 }
 
-.navlist li{
+.navlist li
+{
 display: inline;
 padding: 0;
 margin: 0;

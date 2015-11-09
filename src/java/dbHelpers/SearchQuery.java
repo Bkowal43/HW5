@@ -48,7 +48,7 @@ public class SearchQuery {
     
     public void doSearch(String lastName) throws SQLException{
         
-        String query= "SELECT * FROM BLACKHAWKS_PLAYERS WHERE UPPER(lastName) LIKE ?";
+        String query= "SELECT * FROM BLACKHAWKS_PLAYERS WHERE UPPER(lastName) LIKE ? ORDER BY playerID";
         
         PreparedStatement ps = conn.prepareStatement(query);
         ps.setString(1, "%" + lastName.toUpperCase() + "%");
