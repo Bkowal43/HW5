@@ -15,7 +15,7 @@
         <form name="updateForm" action="updatePlayer" method="get">
             <fieldset>
             <label>Player ID:</label>
-            <input type="text" name="id" value="<%= player.getPlayerID() %>"/>
+            <input type="text" name="id" value="<%= player.getPlayerID() %>"readonly/>
             <br>
             <label>First Name:</label>
             <input type="text" name="first name" value="<%= player.getFirstName() %>"/>

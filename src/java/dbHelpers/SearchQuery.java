@@ -13,37 +13,51 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Properties;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import model.Players;
-import static sun.audio.AudioPlayer.player;
 
-public class ReadQuery {
+/**
+ *
+ * @author Bryan
+ */
+public class SearchQuery {
+    
     private Connection conn;
     private ResultSet results;
-    public ReadQuery() throws IOException, ClassNotFoundException, SQLException{
-    Properties props = new Properties();
-    InputStream instr = getClass().getResourceAsStream("dbConn.properties");
-    props.load(instr);
-    instr.close();
-   
-    String driver= props.getProperty("driver.name");
-    String url = props.getProperty("server.name");
-    String username= props.getProperty("user.name");
-    String passwd= props.getProperty("user.password");
     
-    Class.forName(driver);
-    conn = DriverManager.getConnection(url, username, passwd);
+    public SearchQuery() throws ClassNotFoundException, SQLException{
+        try {
+            Properties props = new Properties();
+            InputStream instr = getClass().getResourceAsStream("dbConn.properties");
+            props.load(instr);
+            instr.close();
+            
+            String driver= props.getProperty("driver.name");
+            String url = props.getProperty("server.name");
+            String username= props.getProperty("user.name");
+            String passwd= props.getProperty("user.password");
+            
+            Class.forName(driver);
+            conn = DriverManager.getConnection(url, username, passwd);
+        } catch (IOException ex) {
+            Logger.getLogger(SearchQuery.class.getName()).log(Level.SEVERE, null, ex);
+        }
     
    }
     
-    public void doRead() throws SQLException{
-        String query= "Select * from BLACKHAWKS_PLAYERS ORDER BY playerID ASC";
+    public void doSearch(String lastName) throws SQLException{
+        
+        String query= "SELECT * FROM BLACKHAWKS_PLAYERS WHERE UPPER(lastName) LIKE ?";
         
         PreparedStatement ps = conn.prepareStatement(query);
-        this.results= ps.executeQuery();
+        ps.setString(1, "%" + lastName.toUpperCase() + "%");
+        this.results=ps.executeQuery();
+    }    
         
-    }
-    public String getHTMLtable() throws SQLException{
-        String table ="";
+    public String getHTMLTable() throws SQLException{
+        
+       String table ="";
         table +="<table>";
         table+="<tr>";
         table +="<th>ID</th>";
@@ -92,8 +106,6 @@ public class ReadQuery {
                  table += "</table>";
                 return table;
     }
-
-    public String getHTMLTable() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-}
+    
+    

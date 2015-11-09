@@ -12,6 +12,8 @@
         <h1>Chicago Blackhawks Player Database</h1>
         
         <a href="read">View All Players</a>
+        <br><br>
+        <a href="search.jsp">Search Players</a>
         </div>
     </body>
 </html>

@@ -54,3 +54,5 @@ fieldset{
     font-size: 2.5em;
 }
 
+input [readonly] {background-color:gray;}
+
