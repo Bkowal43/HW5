@@ -8,6 +8,11 @@
         <title>Search Players</title>
     </head>
     <body>
+        <div class="wrap">  <!--div to hold all other divs -->
+        <%@ include file ="includes/header.jsp" %>
+        
+        
+        <%@ include file ="includes/menu.jsp" %>
         <h1>Search Players by Last Name</h1>
         <form name="searchForm" action="search" methdo="get">
             
@@ -19,5 +24,9 @@
             
             
         </form>
+        <%@ include file ="includes/footer.jsp" %>
+        
+         </div>
+         </div> <!-- close the wrap div -->  
     </body>
 </html>

@@ -10,6 +10,11 @@
         <title>Update Player</title>
     </head>
     <body>
+        <div class="wrap">  <!--div to hold all other divs -->
+        <%@ include file ="includes/header.jsp" %>
+        
+        
+        <%@ include file ="includes/menu.jsp" %>
         <h1>Update A Player Record</h1>
         
         <form name="updateForm" action="updatePlayer" method="get">
@@ -33,5 +38,9 @@
             <input type="submit" name="submit" value="Update"/>
    
         </form>
+            <%@ include file ="includes/footer.jsp" %>
+        
+         </div>
+         </div> <!-- close the wrap div --> 
     </body>
 </html>
